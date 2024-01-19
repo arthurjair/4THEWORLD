@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/globe.png" type="image/x-icon" />
+    <title>4THE WORLD</title>
+    <link rel="stylesheet" href="css/cities_nl.css">
+</head>
+<body>
+
+<header>
+    <nav class="stroke">
+        <div class="flex">
+            <img src="img/4theworld.png" class="logo" alt="logo">
+            <div class="nav-link">
+                <a href="index.html" class="nav-links">ABOUT</a>
+            </div>
+            <div class="nav-link">
+                <a href="store-info.html" class="nav-links">SHOP</a>
+            </div>
+            <div class="nav-link">
+                <a href="contact-us.html" class="nav-links">CONTACT</a>
+            </div>
+        </div>
+        <div>
+            <div class="login flex">
+                <img width="24" height="24" style="padding-right: 10px; margin-top: -5.5px;" src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png"
+                    alt="user--v1" />
+                <a href="sign-up.html" class="nav-links">LOGIN</a>
+            </div>
+        </div>
+    </nav>
+</header>
+    
+<section>
+    <div class="banner">
+        <img src="pics/Eindhoven.png" alt="Main Menu Picture">
+        <form id="pageForm" action="">
+            <label for="pageSelect">Select a city:</label>
+            <select id="pageSelect" name="page" onchange="location = this.value;">
+              <option value="" disabled selected>Select...</option>
+              <option value="eindhoven.html">Eindhoven</option>
+              <option value="tilburg.html">Tilburg</option>
+              <option value="breda.html">Breda</option>
+            </select>
+          </form>
+    </div>
+</section>
+
+    <div class="category-buttons">
+        <input type="radio" name="category" id="clothes" class="category-input">
+        <label for="clothes" class="category-label">Clothes</label>
+
+        <input type="radio" name="category" id="electronics" class="category-input">
+        <label for="electronics" class="category-label">Electronics</label>
+
+        <input type="radio" name="category" id="furniture" class="category-input">
+        <label for="furniture" class="category-label">Furniture</label>
+    </div>
+
+    <div class="image-container" id="image-container">
+        <div class="image-content clothes">
+            <!-- Images for Clothes category with clickable links -->
+            <a href="https://clothesstore1.com" target="_blank"><img src="pics/clothes1.jpg" alt="Clothes Store 1"></a>
+            <a href="https://clothesstore2.com" target="_blank"><img src="pics/clothes2.jpg" alt="Clothes Store 2"></a>
+            <a href="https://clothesstore3.com" target="_blank"><img src="pics/clothes3.jpg" alt="Clothes Store 3"></a>
+        </div>
+
+        <div class="image-content electronics">
+            <!-- Images for Electronics category with clickable links -->
+            <a href="https://electronicsstore1.com" target="_blank"><img src="pics/electronics1.jpg" alt="Electronics Store 1"></a>
+            <a href="https://electronicsstore2.com" target="_blank"><img src="pics/electronics2.jpg" alt="Electronics Store 2"></a>
+            <a href="https://electronicsstore3.com" target="_blank"><img src="pics/electronics3.jpg" alt="Electronics Store 3"></a>
+        </div>
+
+        <div class="image-content furniture">
+            <!-- Images for Furniture category with clickable links -->
+            <a href="https://furniturestore1.com" target="_blank"><img src="pics/furniture1.jpg" alt="Furniture Store 1"></a>
+            <a href="https://furniturestore2.com" target="_blank"><img src="pics/furniture2.jpg" alt="Furniture Store 2"></a>
+            <a href="https://furniturestore3.com" target="_blank"><img src="pics/furniture3.jpg" alt="Furniture Store 3"></a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="wrapp_logo">
+            <img class="footer_logo" src="pics/logo1-removebg-preview 10.png" alt="Logo">
+        </div>
+        <p>&copy; Copyright 2024 4 THE WORLD</p>
+    </footer>
+
+
+</body>
+</html>

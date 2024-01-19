@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/globe.png" type="image/x-icon" />
+    <title>4 THE WORLD </title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
+
+</head>
+
+<body>
+    <div class="toptext">There are some HOT sales RN!   <a onclick="scrollToSection('discounttext')"> Check them out!</a></div>
+    <nav class="stroke">
+        <div class="flex">
+            <img src="img/4theworld.png" class="logo" alt="logo">
+            <div class="nav-link">
+                <a href="index.html" class="nav-links">HOME</a>
+            </div>
+            <div class="nav-link">
+                <a href="eindhoven-shop.html" class="nav-links">SHOP </a>
+            </div>
+            <div class="nav-link">
+                <a href="contact-us.html" class="nav-links">CONTACT</a>
+            </div>
+        </div>
+        <div>
+            <div class="login flex">
+                <img width="24" height="24" style="padding-right: 10px; margin-top: -5.5px;" src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png"
+                    alt="user--v1" />
+                <a href="#" class="nav-links" id="form-open">LOGIN</a>
+            </div>            
+        </div>  
+    
+    <!-- Login -->
+    <div class="login_container" id="login-popup" style="display: none;">
+        <i class="uil uil-times form_close" onclick="closePopup()"></i>
+            <h7>login</h7>
+            <div class="input-box">
+                <input type="email" placeholder="enter your email">
+                <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="enter your password">
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hidden"></i>
+            </div>
+            <div class="option_field">
+                <span class="checkbox">
+                    <input type="checkbox" id="check">
+                    <label for="check">remember me</label>
+                </span>
+                <a href="#" class="forgot_pw">forgot password</a>
+            </div>
+
+            <button class="button">login</button>
+
+            <div class="login-signup"> already have an account?
+                <a href="./sign-up.html" id="signup"> signup</a>
+            </div>
+    </div>
+            <script>
+                var popup = document.getElementById('login-popup');
+                var openButton = document.getElementById('form-open');
+            
+                openButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    popup.style.display = 'block';
+                });
+            
+                function closePopup() {
+                    popup.style.display = 'none';
+                }
+            </script>
+            
+    </nav>
+    <div id="slider-container">
+        <div id="slider">
+            <div class="slide">
+                <img src="img/623.png" alt="Image 1">
+                <div class="text"></div>
+            </div>
+            <div class="slide">
+                <img src="img/Group 63 (1).png" alt="Image about clothing deals">
+                <div class="text"></div>
+            </div>
+            <div class="slide">
+                <img src="img/Group 64 (1).png" alt="Image 3">
+                <div class="text"></div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    
+    
+        <div id="prev" onclick="prevSlide">&#10094;</div>
+        <div id="next" onclick="nextSlide">&#10095;</div>
+    </div>
+    
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+    
+        function showSlide(index) {
+            if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentIndex = 0;
+            } else {
+                currentIndex = index;
+            }
+    
+            const translateValue = -currentIndex * 100 + '%';
+            document.getElementById('slider').style.transform = 'translateX(' + translateValue + ')';
+        }
+    
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+    
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+    
+        // Auto-play functionality
+        let autoPlayInterval;
+    
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 3500); // Change slide every 3 seconds (adjust as needed)
+        }
+    
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+    
+        // Event listeners for manual navigation
+        document.getElementById('next').addEventListener('click', function() {
+            stopAutoPlay();
+            nextSlide();
+        });
+    
+        document.getElementById('prev').addEventListener('click', function() {
+            stopAutoPlay();
+            prevSlide();
+        });
+    
+        // Start auto-play when the page loads
+        startAutoPlay();
+    </script>
+    
+    <div class="aboutus">
+       <div class="logo2"> <img src="img/4theworld-logo.png" alt=""> </div>
+        <div class="aboutustitle"> ABOUT US</div>
+        <ul>
+                <li><img src="./img/checkmark.png" alt=""> We built this website to make finding discounts at your favorite stores easier</li>
+                <li><img src="./img/checkmark.png" alt=""> We still don't know why we are called 4TheWorld</li>
+                <li><img src="./img/checkmark.png" alt="">Made by international students.</li>
+        </ul>
+       
+    
+    </div>
+
+    
+    <div id="discounttext"> DISCOUNTS AND <img src="img/fireicon.png"> DEALS</div>
+    <div class="discountsection">
+        <div class="discountshop1"> 
+            <a href="store-info.html"> 
+            <img src="img/Screenshot 2024-01-14 174932.png" alt="logo of Zara"> </a>
+            <p> UP 30 % OFF</p> 
+        </div>
+        <div class="discountshop2"> 
+            <img src="img/scoth and soda.png" alt="logo of Zara">
+            <p> WINTER SALE UP TO 40%</p>
+           
+        </div>
+        <div class="discountshop3"> 
+            <img src="img/vtwonen.png" alt="logo of Zara">
+            <p> LAST PIECES UP TO 60%</p>
+           
+        </div>  
+
+       
+
+    </div>
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+<footer> Copyright @2023 4THEWORLD</footer>
+</html>
+
+    
+    
+
+  

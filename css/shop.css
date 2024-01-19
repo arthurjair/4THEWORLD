@@ -1,0 +1,561 @@
+@import url('https://fonts.cdnfonts.com/css/mukta');
+@import url('https://fonts.cdnfonts.com/css/alef');
+@import url('https://fonts.cdnfonts.com/css/angkor-2');
+@import url(https://db.onlinewebfonts.com/c/4240d80d220fb28a56ac96c2661b885f?family=Shilia+W23+330+Light);
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+/* Common Class */
+.flex, .shop-star, .shop-rating, .star, .rating, .row {
+    display: flex;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #84a98c;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.stroke a {
+    position: relative;
+}
+
+.stroke a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    display: block;
+    transition: all 0.3s ease;
+    bottom: -3px;
+}
+
+.stroke a:hover:after {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+
+.logo {
+    width: 15%;
+    padding-right: 50px;
+}
+
+.nav-link {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-link > a {
+    text-decoration: none;
+    color: white;
+}
+
+.login {
+    margin-top: 10px;
+    padding-right: 40px;
+}
+
+.login > a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero */
+.city-hero {
+    position: relative;
+    background-color: white;
+    height: 455px;
+}
+
+.city {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    width: 57%;
+}
+
+select {
+    border: none;
+    border-bottom: 1px solid;
+    font-family: 'Mukta', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+select option {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+.city-form {
+    font-family: 'Mukta', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 70px;
+    right: 15px;
+}
+
+/* Category */
+.shop {
+    background-color: #84a98c;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    min-height: 43.7vh;
+}
+
+.category-btn {
+    background-color: #2F3E46;
+    border: none;
+    padding: 7px 20px;
+    font-family: 'Alef', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 80px;
+    width: 170px;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background-color: #485A64;
+}
+
+.category-btn:focus {
+    background-color: #8CB0C3;
+}
+
+.center {
+    justify-content: space-evenly;
+}
+
+/* Stores */
+.myDiv {
+    display: none;
+}
+
+.container {
+    display: grid;
+    padding-top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "div1 div2 div3"
+      "div4 div5 div6";
+}
+  
+.div1 {
+    background-color: #CAD2C5;
+    border-radius: 15px;
+    justify-self: end;
+    grid-area: div1;
+    width: 270px;
+    height: 250px;
+}
+  
+.div2 {
+    background-color: #CAD2C5;
+    border-radius: 15px;
+    justify-self: center;
+    grid-area: div2;
+    width: 270px;
+    height: 250px;
+}
+  
+.div3 {
+    background-color: #CAD2C5;
+    border-radius: 15px;
+    justify-self: start;
+    grid-area: div3;
+    width: 270px;
+    height: 250px;
+}
+  
+.div4 {
+    background-color: #CAD2C5;
+    border-radius: 15px;
+    justify-self: end;
+    grid-area: div4;
+    width: 270px;
+    height: 250px;
+}
+  
+.div5 {
+    background-color: #CAD2C5;
+    border-radius: 15px;
+    justify-self: center;
+    grid-area: div5;
+    width: 270px;
+    height: 250px;
+}
+  
+.div6 {
+    background-color: #CAD2C5;
+    border-radius: 15px;
+    justify-self: start;
+    grid-area: div6;
+    width: 270px;
+    height: 250px;
+}
+
+.shop-store {
+    display: block;
+    text-align: center;
+    padding-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.shop-store > img {
+    width: 70%;
+    filter: drop-shadow(5px 5px 10px gray);
+}
+
+.shop-name {
+    margin: 0;
+    padding-top: 20px;
+    font-family: 'Angkor', sans-serif;
+    font-size: large;
+    cursor: pointer;
+}
+
+.shop-star {
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shop-star > img {
+    padding: 0px 0px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #2F3E46;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Hero */
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)), url(../img/store.png);
+    height: 475px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.marquee {
+    position: relative;
+    overflow: hidden;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 0, 0, .75);
+}
+
+.marquee a {
+    width: 100%;
+}
+
+.marquee-keywords {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+}
+
+.marquee-keywords span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee-keywords 30s linear infinite;
+    -webkit-animation: marquee-keywords 30s linear infinite;
+    color: white !important;
+    letter-spacing: 0.2em;
+    font-family: "Shilia W23 330 Light";
+    animation-delay: -14s;
+    -webkit-animation-delay: -14s;
+}
+
+.marquee-keywords-two span {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+@keyframes marquee-keywords {
+  0% {
+      transform: translate(0, 0);
+  }
+
+  100% {
+      transform: translate(-100%, 0);
+  }
+}
+
+@-webkit-keyframes marquee-keywords {
+  0% {
+      -webkit-transform: translate(0, 0);
+  }
+
+  100% {
+      -webkit-transform: translate(-100%, 0);
+  }
+}
+
+.store {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.store > img {
+    width: 15%;
+}
+
+.map {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* Website Detail */
+.detail {
+    margin: 0 auto;
+    width: 75%;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.website-detail-container {
+    display: grid;
+    padding-left: 85px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    width: 100%;
+    padding-left: 15%;
+}
+
+.website-detail-center {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 75px;
+    margin-bottom: 15px;
+}
+
+.website-detail {
+    margin-top: 15px;
+    display: flex;
+}
+
+.website-detail > .icon {
+    width: 25px;
+}
+
+.website-detail > .content {
+    margin-top: 5px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.content > a {
+    text-decoration: none;
+    color: black;
+}
+
+.brand-store > img {
+    width: 100%;
+    margin-top: 100px;
+    box-shadow: -1px 9px 24px 5px rgba(0,0,0,0.75);
+}
+
+/* Brand Description */
+.brand-description {
+    background-color: #cad2c5;
+    padding: 25px 100px;
+    font-size: 20px; 
+    text-align: center;
+    box-shadow: -1px 9px 24px 5px rgba(0,0,0,0.75);
+    line-height: 1.6;
+    font-family: serif;
+    margin-top: 30px;
+}
+
+/* Reviews/Ratings */
+.reviews {
+    margin-top: 15px;
+}
+
+.scroll-container {
+    overflow: auto;
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.cover {
+    padding: 0px 30px;
+    position: relative;
+}
+
+.left, .right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+.review-row {
+    padding: 10px;
+}
+
+.reviews > h1 {
+    text-align: center;
+    font-size: 35px;
+    border-bottom: 2px solid black;
+    width: 50%;
+    padding-bottom: 5px;
+    margin: 0 auto;
+}
+
+.w-50 {
+    width: 50%;
+    padding: 10px;
+}
+
+.review-card {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    height: 350px;
+    box-shadow: -1px 9px 24px 5px rgba(0,0,0,0.75);
+    background-color: #354f52;
+    color: white;
+}
+
+.date, .rating-description {
+    font-weight: lighter;
+}
+
+.rating-description {
+    font-size: 14.5px;
+    line-height: 1.3;
+    word-spacing: 1px;
+    min-height: 150px;
+    padding-top: 3px;
+}
+
+.star {
+    padding-right: 30px;
+}
+
+.name, .date {
+    margin: 0px;
+    padding-top: 1px;
+}
+
+.name {
+    padding-right: 10px; 
+}
+.star > img {
+    padding: 0px 2px;
+}
+
+.title {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .city {
+        height: 89%;
+    }
+
+    .website-detail-center {
+        margin-top: 115px;
+    }
+}
